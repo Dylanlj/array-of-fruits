@@ -1,0 +1,67 @@
+@font-face {
+  font-family: avenir-next-ultralight;
+  src: url("./assets/font/AvenirNext-UltraLight.eot"), url("./assets/font/AvenirNext-UltraLight.svg") format("svg"), url("./assets/font/AvenirNext-UltraLight.ttf") format("truetype"), url("./assets/font/AvenirNext-UltraLight.woff") format("woff"); }
+
+.written-content {
+  font-family: 'avenir-next-ultralight';
+  color: #cecece;
+  position: absolute;
+  left: 60px;
+  width: 45%; }
+
+.media-icons img {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px; }
+
+.media-icons img:hover {
+  cursor: pointer; }
+
+.sate-logo {
+  height: 28px;
+  width: 28px; }
+
+.body-text {
+  margin-top: 250px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 5px; }
+
+.divider {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 1px;
+  width: 20px;
+  background-color: white; }
+
+.leave-email {
+  font-size: 12px; }
+
+.your-email {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+  .your-email input {
+    height: 30px;
+    width: 160px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: solid 1px;
+    border-color: #cecece;
+    background: transparent; }
+  .your-email input::placeholder {
+    color: #cecece;
+    font-family: 'avenir-next-ultralight';
+    color: #cecece; }
+
+.food-images img {
+  height: 30px;
+  width: 30px; }
+
+.sate-background {
+  object-fit: cover;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }

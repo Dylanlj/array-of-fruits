@@ -1,0 +1,68 @@
+.written-content {
+  @include font-format()
+  position: absolute;
+  left: 60px;
+  width: 45%;
+}
+
+
+.media-icons {
+
+  img {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+  }
+  img:hover {
+    cursor: pointer;
+  }
+}
+
+.sate-logo {
+  height: 28px;
+  width: 28px;
+}
+
+.body-text {
+  // position: absolute;
+  // top: 300px;
+  margin-top: 250px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+}
+
+.divider {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 1px;
+  width: 20px;
+  background-color: white;
+
+}
+.leave-email {
+  font-size: 12px;
+}
+
+.your-email {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  input {
+    height: 30px;
+    width: 160px;
+    padding-left: 10px;
+    font-size: 14px;
+    // color: white;
+    border: solid 1px;
+    border-color: $off-white;
+    background: transparent;
+
+  }
+    input::placeholder {
+      color: $off-white;
+      @include font-format();
+    }
+}
+
+
