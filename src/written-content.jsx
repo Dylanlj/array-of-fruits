@@ -3,7 +3,7 @@ import facebookIcon         from './assets/images/facebook.svg'
 import instagramIcon        from './assets/images/instagram.svg'
 import twitterIcon          from './assets/images/twitter.svg'
 import sateLogo             from './assets/images/sate_logo.png'
-
+import arrow                from './assets/images/arrow.png'
 
 
 class WrittenContent extends Component {
@@ -13,13 +13,14 @@ class WrittenContent extends Component {
       <div className="written-content">
       <img src={sateLogo} alt='sate logo' className='sate-logo'/>
         <div className="body-text">
-          SATE IF A PREMIUM MEAL PLANNING AND DELIVERY SERVICE FOR THOSE WHO TAKE THEIR FITNESS AND NUTRITION SERIOUSLY.
+          SATE IS A PREMIUM MEAL PLANNING AND DELIVERY SERVICE FOR THOSE WHO TAKE THEIR FITNESS AND NUTRITION SERIOUSLY.
         </div>
         <div className='divider'/>
         <div className="leave-email">
         leave us your email address to learn more:
         <form className='your-email'>
           <input type='text' placeholder='you@email.com'/>
+          <img src={arrow} alt='form arrow' className='arrow'/>
         </form>
         </div>
         <div className="media-icons">

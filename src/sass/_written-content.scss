@@ -5,7 +5,11 @@
   width: 45%;
 }
 
-
+.arrow {
+  position: relative;
+  left: -18px;
+  top: 2px;
+}
 .media-icons {
 
   img {
@@ -19,6 +23,7 @@
 }
 
 .sate-logo {
+  margin-top: 50px;
   height: 28px;
   width: 28px;
 }
@@ -52,8 +57,9 @@
     height: 30px;
     width: 160px;
     padding-left: 10px;
+    padding-right: 20px;
     font-size: 14px;
-    // color: white;
+    @include font-format();
     border: solid 1px;
     border-color: $off-white;
     background: transparent;

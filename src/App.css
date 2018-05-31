@@ -9,6 +9,11 @@
   left: 60px;
   width: 45%; }
 
+.arrow {
+  position: relative;
+  left: -18px;
+  top: 2px; }
+
 .media-icons img {
   height: 16px;
   width: 16px;
@@ -18,6 +23,7 @@
   cursor: pointer; }
 
 .sate-logo {
+  margin-top: 50px;
   height: 28px;
   width: 28px; }
 
@@ -44,7 +50,10 @@
     height: 30px;
     width: 160px;
     padding-left: 10px;
+    padding-right: 20px;
     font-size: 14px;
+    font-family: 'avenir-next-ultralight';
+    color: #cecece;
     border: solid 1px;
     border-color: #cecece;
     background: transparent; }
@@ -53,9 +62,58 @@
     font-family: 'avenir-next-ultralight';
     color: #cecece; }
 
-.food-images img {
-  height: 30px;
-  width: 30px; }
+.food-images {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .food-images img {
+    height: auto;
+    position: absolute; }
+
+.seed1 {
+  width: 15px;
+  left: 10%;
+  top: 200px; }
+
+.seed2 {
+  width: 15px;
+  right: 10%;
+  top: 500px; }
+
+.seed3 {
+  width: 15px;
+  right: 13%;
+  top: 300px; }
+
+.seeds {
+  width: 130%;
+  height: 130%; }
+
+.fig {
+  width: 180px;
+  top: -40px;
+  right: 10%; }
+
+.mint1 {
+  width: 130px;
+  right: 25%;
+  bottom: -60px; }
+
+.mint2 {
+  width: 100px;
+  top: 100px;
+  left: 24%; }
+
+.mushroom {
+  width: 140px;
+  right: 22%;
+  top: 400px; }
+
+.kiwi {
+  width: 170px;
+  left: 30%;
+  bottom: -80px; }
 
 .sate-background {
   object-fit: cover;
