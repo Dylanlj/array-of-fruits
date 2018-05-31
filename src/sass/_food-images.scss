@@ -46,15 +46,15 @@
   }
 
   .mint2 {
-    width: 100px;
-    top: 100px;
+    width: 95px;
+    bottom: 60%;
     left: 24%;
   }
 
   .mushroom {
     width: 150px;
     left: 600px;
-    top: 390px;
+    bottom: 20%;
   }
 
   .kiwi {
@@ -68,6 +68,18 @@
   @media screen and (max-width: 740px) {
     .mushroom {
       left: 84%;
+    }
+  }
+
+    @media screen and (max-width: 510px) {
+    .mushroom {
+      width: 0px;
+    }
+  }
+
+  @media screen and (max-height: 630px) {
+    .mint1 {
+      width: 0px;
     }
   }
 

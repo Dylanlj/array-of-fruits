@@ -6,9 +6,13 @@
   font-family: 'avenir-next-ultralight';
   color: #cecece;
   position: absolute;
-  left: 60px;
+  left: 6%;
   width: 45%;
   height: 100%; }
+
+.written-content-container {
+  position: absolute;
+  bottom: 5px; }
 
 .arrow {
   position: relative;
@@ -24,12 +28,12 @@
   cursor: pointer; }
 
 .sate-logo {
-  margin-top: 50px;
+  position: absolute;
+  top: 8%;
   height: 28px;
   width: 28px; }
 
 .body-text {
-  margin-top: 250px;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 5px; }
@@ -63,15 +67,25 @@
     font-family: 'avenir-next-ultralight';
     color: #cecece; }
 
-@media screen and (max-width: 740px) {
-  .written-content {
-    width: 70%; } }
-
-@media screen and (max-height: 670px) {
+@media screen and (max-width: 768px) {
   .written-content {
     width: 70%; }
+  .divider {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .your-email {
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 440px) {
   .body-text {
-    margin-top: 40%; } }
+    font-size: 16px; } }
+
+@media screen and (max-height: 425px) {
+  .written-content-container {
+    top: 60px;
+    bottom: auto; }
+  .sate-logo {
+    top: 18px; } }
 
 .food-images {
   position: absolute;
@@ -108,13 +122,13 @@
     left: 620px;
     bottom: -65px; }
   .food-images .mint2 {
-    width: 100px;
-    top: 100px;
+    width: 95px;
+    bottom: 60%;
     left: 24%; }
   .food-images .mushroom {
     width: 150px;
     left: 600px;
-    top: 390px; }
+    bottom: 20%; }
   .food-images .kiwi {
     width: 170px;
     left: 300px;
@@ -122,6 +136,12 @@
   @media screen and (max-width: 740px) {
     .food-images .mushroom {
       left: 84%; } }
+  @media screen and (max-width: 510px) {
+    .food-images .mushroom {
+      width: 0px; } }
+  @media screen and (max-height: 630px) {
+    .food-images .mint1 {
+      width: 0px; } }
 
 .sate-background {
   object-fit: cover;
@@ -131,3 +151,7 @@
   width: 100%;
   height: 100%;
   z-index: -1; }
+
+@media screen and (max-width: 370px) {
+  .sate-background {
+    height: 450px; } }

@@ -11,22 +11,24 @@ class WrittenContent extends Component {
   render() {
     return (
       <div className="written-content">
-      <img src={sateLogo} alt='sate logo' className='sate-logo'/>
-        <div className="body-text">
-          SATE IS A PREMIUM MEAL PLANNING AND DELIVERY SERVICE FOR THOSE WHO TAKE THEIR FITNESS AND NUTRITION SERIOUSLY.
-        </div>
-        <div className='divider'/>
-        <div className="leave-email">
-        leave us your email address to learn more:
-        <form className='your-email'>
-          <input type='text' placeholder='you@email.com'/>
-          <img src={arrow} alt='form arrow' className='arrow'/>
-        </form>
-        </div>
-        <div className="media-icons">
-          <img src={facebookIcon} alt='facebook icon'/>
-          <img src={twitterIcon} alt='twitter icon'/>
-          <img src={instagramIcon} alt='instagram icon'/>
+        <img src={sateLogo} alt='sate logo' className='sate-logo'/>
+        <div className="written-content-container">
+          <div className="body-text">
+            SATE IS A PREMIUM MEAL PLANNING AND DELIVERY SERVICE FOR THOSE WHO TAKE THEIR FITNESS AND NUTRITION SERIOUSLY.
+          </div>
+          <div className='divider'/>
+          <div className="leave-email">
+          leave us your email address to learn more:
+          <form className='your-email'>
+            <input type='text' placeholder='you@email.com'/>
+            <img src={arrow} alt='form arrow' className='arrow'/>
+          </form>
+          </div>
+          <div className="media-icons">
+            <img src={facebookIcon} alt='facebook icon'/>
+            <img src={twitterIcon} alt='twitter icon'/>
+            <img src={instagramIcon} alt='instagram icon'/>
+          </div>
         </div>
       </div>
     );
