@@ -1,0 +1,76 @@
+  @mixin mint-away-from-text() {
+    width: 80px;
+    top: -80px;
+    transform: rotate(-30deg);
+  }
+
+
+@media screen and (max-width: 768px) {
+   .mushroom {
+      left: 84%;
+    }
+  .written-content {
+    width: 70%;
+  }
+  .divider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .your-email {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .body-text {
+    font-size: 16px;
+  }
+  // .sate-background {
+  //   height: 550px;
+  // }
+  // .food-images {
+  //   height: 550px;
+  // }
+}
+
+
+
+  @media screen and (max-width: 510px) {
+     .mushroom {
+      width: 0px;
+    }
+    .mint2 {
+      @include mint-away-from-text()
+    }
+  }
+
+  @media screen and (max-height: 630px) {
+    .mint1 {
+      width: 0px;
+    }
+  }
+
+
+
+@media screen and (max-height: 425px) {
+  // .sate-background {
+  //   height: 450px;
+  // }
+  // .food-images {
+  //   height: 450px;
+  // }
+  .written-content-container {
+    top: 25%;
+    bottom: auto;
+  }
+  .sate-logo {
+    top: 18px;
+  }
+  .mint2 {
+    @include mint-away-from-text();
+  }
+
+}
+
+
+

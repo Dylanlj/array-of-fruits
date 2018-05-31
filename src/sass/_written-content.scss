@@ -2,6 +2,7 @@
   @include font-format()
   position: absolute;
   left: 6%;
+  top: 0px;
   width: 45%;
   height: 100%;
 }
@@ -74,36 +75,5 @@
       @include font-format();
     }
 }
-
-@media screen and (max-width: 768px) {
-  .written-content {
-    width: 70%;
-  }
-  .divider {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  .your-email {
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .body-text {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-height: 425px) {
-
-  .written-content-container {
-    top: 60px;
-    bottom: auto;
-  }
-  .sate-logo {
-    top: 18px;
-  }
-}
-
 
 

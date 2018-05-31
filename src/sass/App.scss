@@ -15,11 +15,12 @@ $off-white: #cecece;
 
 
 
-@import '_written-content.scss';
-@import '_food-images.scss';
-@import '_responsive.scss';
+
 .App {
-  // overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .sate-background {
@@ -32,8 +33,6 @@ $off-white: #cecece;
   z-index: -1;
 }
 
-@media screen and (max-width: 370px) {
-  .sate-background {
-    height: 450px;
-  }
-}
+@import '_written-content.scss';
+@import '_food-images.scss';
+@import '_responsive.scss';

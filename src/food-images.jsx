@@ -15,15 +15,17 @@ class FoodImages extends Component {
   render() {
     return (
       <div className="food-images">
-        <img src={fig} alt='fig' className='fig'/>
-        <img src={kiwi} alt='kiwi' className='kiwi'/>
-        <img src={mint1} alt='mint1' className='mint1'/>
-        <img src={mint2} alt='mint2' className='mint2'/>
-        <img src={mushroom} alt='mushroom' className='mushroom'/>
-        <img src={seed1} alt='seed1' className='seed1'/>
-        <img src={seed2} alt='seed2' className='seed2'/>
-        <img src={seed3} alt='seed3' className='seed3'/>
-        <img src={seeds} alt='seeds' className='seeds'/>
+        <img src={fig} alt='fig' className='fig food-image'/>
+        <img src={kiwi} alt='kiwi' className='kiwi food-image'/>
+        <img src={mint1} alt='mint1' className='mint1 food-image'/>
+        <img src={mint2} alt='mint2' className='mint2 food-image'/>
+        <img src={mushroom} alt='mushroom' className='mushroom food-image'/>
+        <div className='all-seeds'>
+          <img src={seed1} alt='seed1' className='seed1 food-image'/>
+          <img src={seed2} alt='seed2' className='seed2 food-image'/>
+          <img src={seed3} alt='seed3' className='seed3 food-image'/>
+          <img src={seeds} alt='seeds' className='seeds food-image'/>
+        </div>
       </div>
     );
   }
