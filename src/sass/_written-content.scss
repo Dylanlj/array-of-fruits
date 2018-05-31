@@ -3,7 +3,9 @@
   position: absolute;
   left: 60px;
   width: 45%;
+  height: 100%;
 }
+
 
 .arrow {
   position: relative;
@@ -29,8 +31,6 @@
 }
 
 .body-text {
-  // position: absolute;
-  // top: 300px;
   margin-top: 250px;
   font-size: 18px;
   line-height: 1.5;
@@ -70,5 +70,22 @@
       @include font-format();
     }
 }
+
+@media screen and (max-width: 740px) {
+  .written-content {
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-height: 670px) {
+  .written-content {
+    width: 70%;
+  }
+  .body-text {
+    margin-top: 40%;
+  }
+}
+
 
 

@@ -7,7 +7,8 @@
   color: #cecece;
   position: absolute;
   left: 60px;
-  width: 45%; }
+  width: 45%;
+  height: 100%; }
 
 .arrow {
   position: relative;
@@ -41,7 +42,7 @@
   background-color: white; }
 
 .leave-email {
-  font-size: 12px; }
+  font-size: 14px; }
 
 .your-email {
   margin-top: 20px;
@@ -62,6 +63,16 @@
     font-family: 'avenir-next-ultralight';
     color: #cecece; }
 
+@media screen and (max-width: 740px) {
+  .written-content {
+    width: 70%; } }
+
+@media screen and (max-height: 670px) {
+  .written-content {
+    width: 70%; }
+  .body-text {
+    margin-top: 40%; } }
+
 .food-images {
   position: absolute;
   width: 100%;
@@ -69,51 +80,48 @@
   overflow: hidden; }
   .food-images img {
     height: auto;
-    position: absolute; }
-
-.seed1 {
-  width: 15px;
-  left: 10%;
-  top: 200px; }
-
-.seed2 {
-  width: 15px;
-  right: 10%;
-  top: 500px; }
-
-.seed3 {
-  width: 15px;
-  right: 13%;
-  top: 300px; }
-
-.seeds {
-  width: 130%;
-  height: 130%; }
-
-.fig {
-  width: 180px;
-  top: -40px;
-  right: 10%; }
-
-.mint1 {
-  width: 130px;
-  right: 25%;
-  bottom: -60px; }
-
-.mint2 {
-  width: 100px;
-  top: 100px;
-  left: 24%; }
-
-.mushroom {
-  width: 140px;
-  right: 22%;
-  top: 400px; }
-
-.kiwi {
-  width: 170px;
-  left: 30%;
-  bottom: -80px; }
+    position: absolute;
+    z-index: 4; }
+  .food-images .seed1 {
+    width: 15px;
+    left: 10%;
+    top: 200px; }
+  .food-images .seed2 {
+    width: 15px;
+    right: 10%;
+    top: 500px; }
+  .food-images .seed3 {
+    width: 15px;
+    right: 13%;
+    top: 300px; }
+  .food-images .seeds {
+    object-fit: cover;
+    width: auto;
+    height: 110%;
+    z-index: 1; }
+  .food-images .fig {
+    width: 180px;
+    top: -40px;
+    left: 65%; }
+  .food-images .mint1 {
+    width: 110px;
+    left: 620px;
+    bottom: -65px; }
+  .food-images .mint2 {
+    width: 100px;
+    top: 100px;
+    left: 24%; }
+  .food-images .mushroom {
+    width: 150px;
+    left: 600px;
+    top: 390px; }
+  .food-images .kiwi {
+    width: 170px;
+    left: 300px;
+    bottom: -80px; }
+  @media screen and (max-width: 740px) {
+    .food-images .mushroom {
+      left: 84%; } }
 
 .sate-background {
   object-fit: cover;
