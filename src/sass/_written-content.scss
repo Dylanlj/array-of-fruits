@@ -9,13 +9,13 @@
 
 .written-content-container {
   position: absolute;
-  bottom: 5px;
+  bottom: 5%;
 }
 
 .arrow {
   position: relative;
   left: -18px;
-  top: 2px;
+  top: 4px;
 }
 .media-icons {
 
@@ -47,7 +47,7 @@
   margin-bottom: 30px;
   height: 1px;
   width: 20px;
-  background-color: white;
+  background-color: $off-white;
 
 }
 .leave-email {
