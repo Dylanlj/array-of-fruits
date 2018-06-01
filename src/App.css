@@ -137,6 +137,10 @@
   left: 300px;
   bottom: -80px; }
 
+@media screen and (max-height: 680px) and (max-width: 370px) {
+  .mint2 {
+    top: 0px; } }
+
 @media screen and (max-width: 768px) {
   .mushroom {
     left: 84%; }
@@ -166,11 +170,10 @@
     margin-bottom: 15px; } }
 
 @media screen and (max-height: 425px) {
+  .App {
+    height: 430px; }
   .written-content {
     width: 60%; }
-  .written-content-container {
-    top: 25%;
-    bottom: auto; }
   .sate-logo {
     top: 18px; }
   .mint2 {

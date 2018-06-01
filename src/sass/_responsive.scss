@@ -1,3 +1,9 @@
+@media screen and (max-height: 680px) and (max-width: 370px) {
+  .mint2 {
+    top: 0px;
+  }
+}
+
 @mixin mint-away-from-text() {
   top: -80px;
   transform: rotate(-30deg);
@@ -26,7 +32,7 @@
 
 
 @media screen and (max-width: 510px) {
-   .mushroom {
+  .mushroom {
     width: 0px;
   }
 
@@ -54,14 +60,17 @@
 
 
 
+
+
 @media screen and (max-height: 425px) {
+
+  .App {
+    height: 430px;
+  }
   .written-content {
     width: 60%;
   }
-  .written-content-container {
-    top: 25%;
-    bottom: auto;
-  }
+
   .sate-logo {
     top: 18px;
   }
