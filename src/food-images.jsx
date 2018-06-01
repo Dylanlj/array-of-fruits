@@ -86,27 +86,27 @@ class FoodImages extends Component {
     })
   }
 
-  setAdjustedCoordinates = () => {
-    console.log('hey')
-    let newCoordinates = {}
-    let mousePosition = this.props.mousePosition
+  // setAdjustedCoordinates = () => {
+  //   console.log('hey')
+  //   let newCoordinates = {}
+  //   let mousePosition = this.props.mousePosition
 
-    for (let foodName in this.state.originalCoordinates) {
-      let element = this.state.originalCoordinates[foodName]
-      newCoordinates[foodName] = {
-        elementPosition: {
-          x: element.x + Math.sqrt(mousePosition.x),
-          y: element.y + Math.sqrt(mousePosition.y)
-        },
-        centerOfElement: {
-          // x: (element.x / 2) + element.offsetLeft,
-          // y: (element.y / 2) + element.offsetTop
-        },
-        // styleCoordinates: {}
-      }
-    }
-    // this.setState({adjustedCoordinates: newCoordinates}, () => {console.log(this.state)})
-  }
+  //   for (let foodName in this.state.originalCoordinates) {
+  //     let element = this.state.originalCoordinates[foodName]
+  //     newCoordinates[foodName] = {
+  //       elementPosition: {
+  //         x: element.x + Math.sqrt(mousePosition.x),
+  //         y: element.y + Math.sqrt(mousePosition.y)
+  //       },
+  //       centerOfElement: {
+  //         // x: (element.x / 2) + element.offsetLeft,
+  //         // y: (element.y / 2) + element.offsetTop
+  //       },
+  //       // styleCoordinates: {}
+  //     }
+  //   }
+  //   // this.setState({adjustedCoordinates: newCoordinates}, () => {console.log(this.state)})
+  // }
 
 
   render() {
@@ -118,23 +118,39 @@ class FoodImages extends Component {
     if (this.state.cssApplied) {
       for (let foodName in this.state.originalCoordinates) {
         let element = this.state.originalCoordinates[foodName].elementPosition
-        // if (element.y < 0) { element.y *= -1}
+
+
+
         let xDif = mousePosition.x - element.x
         let yDif =  mousePosition.y - element.y
-        let left =  (xDif * (xDif / 100) * -0.01) + element.x
-        let top =  (yDif * (yDif / 100) * -0.01 )+ element.y
+        let pythag = Math.sqrt(yDif * yDif + xDif * xDif)
+
+        let left =  (xDif * pythag / -50000 ) + element.x
+        let top =  (yDif * pythag / -50000) + element.y
+        let blur = pythag / 700
+        if (blur < 0.5) {blur = 0.5}
+
+        if (foodName === 'seeds') {
+          let center = this.state.originalCoordinates.fig.centerOfElement
+          // pythag =  Math.sqrt(Math.pow(center.x - mousePosition.x, 2) + Math.pow(center.y - mousePosition.y, 2))
+          xDif = mousePosition.x - center.x
+          yDif = mousePosition.y - center.y
+          top = element.y + yDif * -0.01
+          left = element.x + xDif * -0.01
+          blur = 1.5
+        }
 
         foodPosition[foodName] = {
           positionStyle: {
             position: 'absolute',
             top: `${top}px`,
-            left: `${left}px`
+            left: `${left}px`,
+            filter: `blur(${blur}px)`
           }
         }
       }
     } else {
       for (let foodName in this.state.originalCoordinates) {
-        let element = this.state.originalCoordinates[foodName].elementPosition
         foodPosition[foodName] = {
           positionStyle: {
           }
@@ -145,26 +161,16 @@ class FoodImages extends Component {
 
     return (
       <div className="food-images">
-        <img src={fig} alt='fig'
-        className='fig food-image'
-        style={foodPosition.fig.positionStyle}/>
-        <img src={kiwi} alt='kiwi'
-        className='kiwi food-image'
-        style={foodPosition.kiwi.positionStyle}/>
-        <img src={mint1} alt='mint1'
-        className='mint1 food-image'
-        style={foodPosition.mint1.positionStyle}/>
-        <img src={mint2} alt='mint2'
-        className='mint2 food-image'
-        style={foodPosition.mint2.positionStyle}/>
-        <img src={mushroom} alt='mushroom'
-        className='mushroom food-image'
-        style={foodPosition.mushroom.positionStyle}/>
+        <img src={fig} alt='fig' className='fig food-image' style={foodPosition.fig.positionStyle}/>
+        <img src={kiwi} alt='kiwi' className='kiwi food-image' style={foodPosition.kiwi.positionStyle}/>
+        <img src={mint1} alt='mint1' className='mint1 food-image' style={foodPosition.mint1.positionStyle}/>
+        <img src={mint2} alt='mint2' className='mint2 food-image' style={foodPosition.mint2.positionStyle}/>
+        <img src={mushroom} alt='mushroom' className='mushroom food-image' style={foodPosition.mushroom.positionStyle}/>
         <div className='all-seed-images'>
-          <img src={seed1} alt='seed1' className='seed1 food-image'/>
-          <img src={seed2} alt='seed2' className='seed2 food-image'/>
-          <img src={seed3} alt='seed3' className='seed3 food-image'/>
-          <img src={seeds} alt='seeds' className='seeds food-image'/>
+          <img src={seed1} alt='seed1' className='seed1 food-image' style={foodPosition.seed1.positionStyle}/>
+          <img src={seed2} alt='seed2' className='seed2 food-image' style={foodPosition.seed2.positionStyle}/>
+          <img src={seed3} alt='seed3' className='seed3 food-image' style={foodPosition.seed3.positionStyle}/>
+          <img src={seeds} alt='seeds' className='seeds food-image' style={foodPosition.seeds.positionStyle}/>
         </div>
       </div>
     );
