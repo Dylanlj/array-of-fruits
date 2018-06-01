@@ -59,16 +59,10 @@ class FoodImages extends Component {
   }
 
   componentDidMount () {
-    // document.getElementsByClassName('App').addEventListener('resize', () => {
-      //   this.setState({cssApplied: false}, this.setOriginalPositions)
-      // })
-      window.addEventListener("resize", () => {
-        this.setState({cssApplied: false}, this.setOriginalPositions)
-      })
-
-
-      // console.log(document.getElementsByClassName('App'))
-    setTimeout(this.setOriginalPositions, 100)
+    window.addEventListener("resize", () => {
+      this.setState({cssApplied: false}, this.setOriginalPositions)
+    })
+    setTimeout(this.setOriginalPositions, 1)
   }
 
   setOriginalPositions = () => {
@@ -96,7 +90,10 @@ class FoodImages extends Component {
 
 
   render() {
+    if (console.log(document.getElementsByClassName('seeds')[0])) {
+    console.log(document.getElementsByClassName('seeds')[0].offsetWidth)
 
+    }
     let foodPosition = {}
     let mousePosition = this.props.mousePosition
 

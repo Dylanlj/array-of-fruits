@@ -26,6 +26,11 @@
   top: 300px;
 }
 .seeds {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
   object-fit: cover;
   width: auto;
   height: 110%;
@@ -34,12 +39,12 @@
 .fig {
   width: 180px;
   top: -40px;
-  left: 65%;
+  left: 70%;
 }
 
 .mint1 {
   width: 110px;
-  left: 620px;
+  left: 62%;
   bottom: -65px;
 }
 
@@ -51,7 +56,7 @@
 
 .mushroom {
   width: 150px;
-  left: 600px;
+  left: 60%;
   bottom: 20%;
 }
 

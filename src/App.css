@@ -17,6 +17,10 @@
   height: 100%;
   z-index: -1; }
 
+@keyframes content-fade-in {
+  0% {
+    opacity: 0; } }
+
 .written-content {
   font-family: 'avenir-next-ultralight';
   color: #cecece;
@@ -25,7 +29,8 @@
   top: 0px;
   width: 50%;
   height: 100%;
-  z-index: 30; }
+  z-index: 30;
+  animation: content-fade-in 2s; }
 
 .written-content-container {
   position: absolute;
@@ -36,6 +41,9 @@
   left: -18px;
   top: 4px; }
 
+.arrow:hover {
+  cursor: pointer; }
+
 .media-icons img {
   height: 16px;
   width: 16px;
@@ -43,6 +51,9 @@
 
 .media-icons img:hover {
   cursor: pointer; }
+
+.media-icons .facebook {
+  fill: green !important; }
 
 .sate-logo {
   position: absolute;
@@ -109,6 +120,11 @@
   top: 300px; }
 
 .seeds {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
   object-fit: cover;
   width: auto;
   height: 110%; }
@@ -116,11 +132,11 @@
 .fig {
   width: 180px;
   top: -40px;
-  left: 65%; }
+  left: 70%; }
 
 .mint1 {
   width: 110px;
-  left: 620px;
+  left: 62%;
   bottom: -65px; }
 
 .mint2 {
@@ -130,7 +146,7 @@
 
 .mushroom {
   width: 150px;
-  left: 600px;
+  left: 60%;
   bottom: 20%; }
 
 .kiwi {
@@ -143,6 +159,8 @@
     left: 84%; }
   .written-content {
     width: 70%; }
+  .mint1 {
+    left: 95%; }
   .your-email {
     margin-bottom: 20px; } }
 
