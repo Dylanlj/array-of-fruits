@@ -23,7 +23,7 @@
   position: absolute;
   left: 6%;
   top: 0px;
-  width: 45%;
+  width: 50%;
   height: 100%; }
 
 .written-content-container {
@@ -86,31 +86,31 @@
 .food-image {
   height: auto;
   position: absolute;
-  z-index: 4; }
+  z-index: 4;
+  filter: blur(0.5px); }
+
+.all-seed-images {
+  z-index: 1; }
 
 .seed1 {
   width: 15px;
   left: 10%;
-  top: 200px;
-  z-index: 1; }
+  top: 200px; }
 
 .seed2 {
   width: 15px;
   right: 10%;
-  top: 500px;
-  z-index: 1; }
+  top: 500px; }
 
 .seed3 {
   width: 15px;
   right: 13%;
-  top: 300px;
-  z-index: 1; }
+  top: 300px; }
 
 .seeds {
   object-fit: cover;
   width: auto;
-  height: 110%;
-  z-index: 1; }
+  height: 110%; }
 
 .fig {
   width: 180px;
@@ -159,13 +159,13 @@
     width: 80px; } }
 
 @media screen and (max-height: 640px) {
-  .mint1 {
-    width: 0px; }
   .divider {
     margin-top: 15px;
     margin-bottom: 15px; } }
 
 @media screen and (max-height: 425px) {
+  .mint1 {
+    width: 0px; }
   .App {
     height: 430px; }
   .written-content {

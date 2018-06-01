@@ -44,9 +44,7 @@
 
 
 @media screen and (max-height: 640px) {
-  .mint1 {
-    width: 0px;
-  }
+
   .divider {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -58,23 +56,12 @@
 
 
 @media screen and (max-height: 425px) {
-
-  .App {
-    height: 430px;
-  }
-  .written-content {
-    width: 60%;
-  }
-
-  .sate-logo {
-    top: 18px;
-  }
-  .mint2 {
-    @include mint-away-from-text();
-  }
-  .body-text {
-    font-size: 16px;
-  }
+  .mint1 { width: 0px }
+  .App { height: 430px }
+  .written-content { width: 60% }
+  .sate-logo { top: 18px }
+  .mint2 { @include mint-away-from-text() }
+  .body-text { font-size: 16px }
 
 }
 
