@@ -8,3 +8,5 @@ https://array-of-fruits.herokuapp.com/
 
 mouse trails and such
 https://onextrapixel.com/20-codepen-solutions-for-awesome-mouse-effects/
+
+need to update original positions on scroll and window resizing
