@@ -137,10 +137,6 @@
   left: 300px;
   bottom: -80px; }
 
-@media screen and (max-height: 680px) and (max-width: 370px) {
-  .mint2 {
-    top: 0px; } }
-
 @media screen and (max-width: 768px) {
   .mushroom {
     left: 84%; }
@@ -181,3 +177,13 @@
     transform: rotate(-30deg); }
   .body-text {
     font-size: 16px; } }
+
+@media screen and (max-width: 375px) and (max-height: 610px) {
+  .mint2 {
+    top: -80px;
+    transform: rotate(-30deg); } }
+
+@media screen and (max-width: 500px) and (max-height: 500px) {
+  .mint2 {
+    top: -80px;
+    transform: rotate(-30deg); } }
