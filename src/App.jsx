@@ -17,9 +17,11 @@ class App extends Component {
   handleChange = (event) => {
     console.log(event)
   }
+
   handleMouseEvent = (event) => {
     this.setState({mousePosition: {x: event.screenX, y: event.screenY}})
   }
+
 
   render() {
     return (

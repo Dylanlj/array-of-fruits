@@ -59,7 +59,15 @@ class FoodImages extends Component {
   }
 
   componentDidMount () {
+    // document.getElementsByClassName('App').addEventListener('resize', () => {
+      //   this.setState({cssApplied: false}, this.setOriginalPositions)
+      // })
+      window.addEventListener("resize", () => {
+        this.setState({cssApplied: false}, this.setOriginalPositions)
+      })
 
+
+      // console.log(document.getElementsByClassName('App'))
     setTimeout(this.setOriginalPositions, 100)
   }
 
@@ -86,31 +94,8 @@ class FoodImages extends Component {
     })
   }
 
-  // setAdjustedCoordinates = () => {
-  //   console.log('hey')
-  //   let newCoordinates = {}
-  //   let mousePosition = this.props.mousePosition
-
-  //   for (let foodName in this.state.originalCoordinates) {
-  //     let element = this.state.originalCoordinates[foodName]
-  //     newCoordinates[foodName] = {
-  //       elementPosition: {
-  //         x: element.x + Math.sqrt(mousePosition.x),
-  //         y: element.y + Math.sqrt(mousePosition.y)
-  //       },
-  //       centerOfElement: {
-  //         // x: (element.x / 2) + element.offsetLeft,
-  //         // y: (element.y / 2) + element.offsetTop
-  //       },
-  //       // styleCoordinates: {}
-  //     }
-  //   }
-  //   // this.setState({adjustedCoordinates: newCoordinates}, () => {console.log(this.state)})
-  // }
-
 
   render() {
-
 
     let foodPosition = {}
     let mousePosition = this.props.mousePosition
@@ -132,7 +117,6 @@ class FoodImages extends Component {
 
         if (foodName === 'seeds') {
           let center = this.state.originalCoordinates.fig.centerOfElement
-          // pythag =  Math.sqrt(Math.pow(center.x - mousePosition.x, 2) + Math.pow(center.y - mousePosition.y, 2))
           xDif = mousePosition.x - center.x
           yDif = mousePosition.y - center.y
           top = element.y + yDif * -0.01
