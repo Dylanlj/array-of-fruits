@@ -16,8 +16,8 @@ class WrittenContent extends Component {
   }
 
   sheenAnimation = () => {
-    this.setState({bodyTextStyle: {animation: 'sheen 2s'}}, () => {
-      setTimeout(() => {this.setState({bodyTextStyle: {}})}, 2000)
+    this.setState({bodyTextStyle: {animation: 'sheen 2.5s'}}, () => {
+      setTimeout(() => {this.setState({bodyTextStyle: {}})}, 2500)
 
     })
   }
