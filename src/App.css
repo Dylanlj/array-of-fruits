@@ -61,10 +61,21 @@
   height: 28px;
   width: 28px; }
 
+@keyframes sheen {
+  0% {
+    background-position: 200% 0%; } }
+
 .body-text {
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.5;
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  color: #cecece;
+  background: url("./assets/images/sheen.png");
+  background-position: 0% 0%;
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; }
 
 .divider {
   margin-top: 30px;
@@ -170,7 +181,9 @@
 
 @media screen and (max-width: 510px) {
   .mushroom {
-    width: 0px; } }
+    width: 0px; }
+  .mint1 {
+    top: 70%; } }
 
 @media screen and (max-width: 320px) {
   .mint2 {

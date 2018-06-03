@@ -18,6 +18,8 @@
 .written-content-container {
   position: absolute;
   bottom: 5%;
+//       background: url("./assets/images/sheen.png");
+// background-position: -1000px 0%;
 
 }
 
@@ -52,11 +54,32 @@
   width: 28px;
 }
 
+
+@keyframes sheen {
+  0% {
+    background-position: 200% 0%;
+
+  }
+  // 100% {
+  //       background-image: -webkit-gradient( linear, left top, right bottom, color-stop(0.3, $off-white), color-stop(0.5, green), color-stop(1, $off-white) );
+  // }
+}
+
 .body-text {
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.5;
   letter-spacing: 5px;
+  color: $off-white;
+  background: url("./assets/images/sheen.png");
+  background-position: 0% 0%;
+
+   background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
+
+
 
 .divider {
   margin-top: 30px;

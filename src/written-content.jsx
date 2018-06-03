@@ -8,12 +8,26 @@ import arrow                from './assets/images/arrow.png'
 
 class WrittenContent extends Component {
 
+  constructor (props) {
+    super(props)
+    this.state = {
+      bodyTextStyle: {}
+    }
+  }
+
+  sheenAnimation = () => {
+    this.setState({bodyTextStyle: {animation: 'sheen 2s'}}, () => {
+      setTimeout(() => {this.setState({bodyTextStyle: {}})}, 2000)
+
+    })
+  }
+
   render() {
     return (
       <div className="written-content">
         <img src={sateLogo} alt='sate logo' className='sate-logo'/>
         <div className="written-content-container">
-          <div className="body-text">
+          <div className="body-text" style={this.state.bodyTextStyle} onMouseEnter={this.sheenAnimation}>
             SATE IS A PREMIUM MEAL PLANNING AND DELIVERY SERVICE FOR THOSE WHO TAKE THEIR FITNESS AND NUTRITION SERIOUSLY.
           </div>
           <div className='divider'/>

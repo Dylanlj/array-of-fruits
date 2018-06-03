@@ -9,3 +9,6 @@ mouse trails and such
 https://onextrapixel.com/20-codepen-solutions-for-awesome-mouse-effects/
 
 fix background image, when it loads it changes size for some reason
+
+
+https://codepen.io/stacy/pen/gLmQPY

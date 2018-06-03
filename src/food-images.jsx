@@ -62,7 +62,7 @@ class FoodImages extends Component {
     window.addEventListener("resize", () => {
       this.setState({cssApplied: false}, this.setOriginalPositions)
     })
-    setTimeout(this.setOriginalPositions, 1)
+    setTimeout(this.setOriginalPositions, 100)
   }
 
   setOriginalPositions = () => {
@@ -90,8 +90,7 @@ class FoodImages extends Component {
 
 
   render() {
-    if (console.log(document.getElementsByClassName('seeds')[0])) {
-    console.log(document.getElementsByClassName('seeds')[0].offsetWidth)
+    if (document.getElementsByClassName('seeds')[0]) {
 
     }
     let foodPosition = {}
