@@ -62,7 +62,7 @@ class FoodImages extends Component {
     window.addEventListener("resize", () => {
       this.setState({cssApplied: false}, this.setOriginalPositions)
     })
-    setTimeout(this.setOriginalPositions, 100)
+    setTimeout(this.setOriginalPositions, 200)
   }
 
   setOriginalPositions = () => {
