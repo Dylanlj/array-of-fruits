@@ -11,14 +11,12 @@
   background-size: cover;
   background-position: center; }
 
-.trail.one {
+.trail {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background: green;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  background: teal;
   z-index: 50; }
 
 @keyframes content-fade-in {

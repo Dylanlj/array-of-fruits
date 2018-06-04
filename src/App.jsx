@@ -10,60 +10,94 @@ class App extends Component {
     super(props)
     this.state = {
       mousePosition: {x: 0, y: 0},
-      mouseTrail: [],
-      mouseCircleClass: 'inactive'
+      adjustedMouse: {x: 0, y: 0},
+      trailPosition: [],
+      dots: [],
+      dotClass: 'inactive'
     }
   }
 
+  componentWillMount () {
+    let startingPosition = []
+      for(let i = 0; i < 12; i++) {
+        startingPosition.push({x: 0, y: 0})
+      }
+    this.setState({trailPosition: startingPosition})
+  }
 
   handleMouseEvent = (event) => {
-
-    let mouseTrail = this.state.mouseTrail
-    if (this.state.mouseCircleClass !== 'inactive') {
-      console.log('hey')
-      mouseTrail.push({x: event.screenX - 50, y: event.screenY - 140})
-      if(mouseTrail.length > 50) { mouseTrail.shift() }
-    }
-
-    this.setState({mousePosition: {x: event.screenX, y: event.screenY}, mouseTrail: mouseTrail})
+    this.setState({
+      mousePosition: {x: event.screenX - 20, y: event.screenY - 120}
+    }, this.draw)
   }
 
   logoAnimation = () => {
-    let mouseTrail = []
-    for (let i = 0; i < 50; i++) {
-      mouseTrail.push(this.state.mousePosition)
+
+    if(this.state.dotClass === 'inactive') {
+      let dots = []
+      // for(let i = 0; i < 6; i++) {
+      //   let d = this.createDot()
+      //   dots.push(d)
+      // }
+      this.setState({dotClass: 'trail', dots: dots}, this.draw )
+    } else {
+      this.setState({
+        dotClass: 'inactive'
+      })
     }
-    this.setState({
-      mouseCircleClass: 'trail',
-      mouseTrail: mouseTrail
-    })
   }
 
-  removeTrail = () => {
-    let mouseTrail = this.state.mouseTrail
-    if(mouseTrail.length > 1) {
-      this.setState({mouseTrail: mouseTrail.shift()})
-      setTimeout(this.removeTrail, 500)
+  // callDraw = () => {
+  //   this.draw()
+  //   setTimeout(this.callDraw, 100)
+  // }
+
+  draw = () => {
+    let dotPositions = this.state.trailPosition
+    let mouse = this.state.mousePosition
+
+    for (let i = 0; i < dotPositions.length; i++){
+      let nextDot = dotPositions[i + 1] || dotPositions[0]
+      dotPositions[i] = {x: mouse.x, y: mouse.y}
+
+      // this.setState({trailPosition: dotPositions})
+      // if( (dotPositions[i].x - this.state.mousePosition.x) > 0.4) {
+        this.setState({trailPosition: dotPositions})
+      // }
+
+      mouse.x += (nextDot.x - mouse.x) * 0.6
+      mouse.y += (nextDot.y - mouse.y) * 0.6
     }
   }
+
+  // createDot = () => {
+
+  //   let n = (
+  //     <div className='trail' style={{
+  //       left: this.state.mousePosition.x + 'px',
+  //       top: this.state.mousePosition.y + 'px'
+  //       }}
+  //     />)
+  //   return n;
+
+  // };
+
+//   var Dot = function() {
+//   this.x = 0;
+//   this.y = 0;
+//   this.node = (function(){
+//     var n = document.createElement("div");
+//     n.className = "trail";
+//     document.body.appendChild(n);
+//     return n;
+//   }());
+// };
 
   render() {
 
-
-        //  <div className={this.state.mouseCircleClass + ' two'} style={{left: this.state.mousePosition.x, top: this.state.mousePosition.y}}/>
-        // <div className={this.state.mouseCircleClass + ' three'} style={{left: this.state.mousePosition.x, top: this.state.mousePosition.y}}/>
-        // <div className={this.state.mouseCircleClass + ' four'} style={{left: this.state.mousePosition.x, top: this.state.mousePosition.y}}/>
-        // <div className={this.state.mouseCircleClass + ' five'} style={{left: this.state.mousePosition.x, top: this.state.mousePosition.y}}/>
-        // <div className={this.state.mouseCircleClass + ' six'} style={{left: this.state.mousePosition.x, top: this.state.mousePosition.y}}/>
-        let mouseTrail = this.state.mouseTrail
-        let style = {}
-        if( this.state.mouseCircleClass === 'trail') {
-          console.log(mouseTrail.length)
-          style = {
-            left: mouseTrail[Math.ceil(mouseTrail.length / 2)].x,
-            top: mouseTrail[Math.ceil(mouseTrail.length / 2)].y
-          }
-        }
+    // while( this.state.dotClass === 'trail') {
+    //   setTimeout(this.draw, 500)
+    // }
 
     return (
       <div className="App" onMouseMove={this.handleMouseEvent.bind(this)}>
@@ -74,8 +108,37 @@ class App extends Component {
         <WrittenContent
           logoAnimation={this.logoAnimation}
         />
-        {this.state.mouseCircles}
-        <div className={this.state.mouseCircleClass + ' one'} style={style}/>
+        <div className={this.state.dotClass} style={{
+          left: this.state.trailPosition[0].x + 'px',
+          top: this.state.trailPosition[0].y + 'px'
+          }}
+        />
+                <div className={this.state.dotClass} style={{
+          left: this.state.trailPosition[1].x + 'px',
+          top: this.state.trailPosition[1].y + 'px'
+          }}
+        />
+                <div className={this.state.dotClass} style={{
+          left: this.state.trailPosition[2].x + 'px',
+          top: this.state.trailPosition[2].y + 'px'
+          }}
+        />
+                <div className={this.state.dotClass} style={{
+          left: this.state.trailPosition[3].x + 'px',
+          top: this.state.trailPosition[3].y + 'px'
+          }}
+        />
+                <div className={this.state.dotClass} style={{
+          left: this.state.trailPosition[4].x + 'px',
+          top: this.state.trailPosition[4].y + 'px'
+          }}
+        />
+                <div className={this.state.dotClass} style={{
+          left: this.state.trailPosition[5].x + 'px',
+          top: this.state.trailPosition[5].y + 'px'
+          }}
+        />
+
       </div>
     );
   }
