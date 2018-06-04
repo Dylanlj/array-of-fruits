@@ -2,7 +2,6 @@
 https://array-of-fruits.herokuapp.com/
 
 
-
 features
 food images move based on mouse location
 food will blur based on mouse proximity
