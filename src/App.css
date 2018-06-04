@@ -11,6 +11,16 @@
   background-size: cover;
   background-position: center; }
 
+.trail.one {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: green;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 50; }
+
 @keyframes content-fade-in {
   0% {
     opacity: 0; } }
@@ -46,18 +56,16 @@
 .media-icons img:hover {
   cursor: pointer; }
 
-.media-icons .facebook {
-  fill: green !important; }
-
 .sate-logo {
   position: absolute;
   top: 8%;
   height: auto;
-  width: 28px; }
+  width: 28px;
+  cursor: pointer; }
 
 @keyframes sheen {
   0% {
-    background-position: 100% 0%; } }
+    background-position: 70% 100%; } }
 
 .body-text {
   font-size: 18px;
@@ -66,8 +74,7 @@
   letter-spacing: 5px;
   color: #cecece;
   background: url("./assets/images/shadow.png");
-  background-position: 0% 0%;
-  background-attachment: fixed;
+  background-position: -20% 100%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; }
 
@@ -99,6 +106,12 @@
     color: #cecece;
     font-family: 'avenir-next-ultralight';
     color: #cecece; }
+
+@keyframes from-center {
+  50% {
+    left: 100%; }
+  51% {
+    left: -10%; } }
 
 .food-image {
   height: auto;

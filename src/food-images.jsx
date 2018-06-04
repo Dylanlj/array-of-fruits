@@ -55,10 +55,11 @@ class FoodImages extends Component {
         }
       }
     }
-    // this.originalPositions = this.originalPositions.bind(this)
+
   }
 
   componentDidMount () {
+
     window.addEventListener("resize", () => {
       this.setState({cssApplied: false}, this.setOriginalPositions)
     })
@@ -90,6 +91,7 @@ class FoodImages extends Component {
 
 
   render() {
+
     if (document.getElementsByClassName('seeds')[0]) {
 
     }
@@ -99,9 +101,6 @@ class FoodImages extends Component {
     if (this.state.cssApplied) {
       for (let foodName in this.state.originalCoordinates) {
         let element = this.state.originalCoordinates[foodName].elementPosition
-
-
-
         let xDif = mousePosition.x - element.x
         let yDif =  mousePosition.y - element.y
         let pythag = Math.sqrt(yDif * yDif + xDif * xDif)

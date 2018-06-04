@@ -26,6 +26,17 @@ $off-white: #cecece;
   background-position: center;
 }
 
+.trail.one {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: green;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 50;
+}
+
 
 @import '_written-content.scss';
 @import '_food-images.scss';

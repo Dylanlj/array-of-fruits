@@ -22,14 +22,12 @@ class WrittenContent extends Component {
     })
   }
 
-  logoAnimation = () => {
 
-  }
 
   render() {
     return (
       <div className="written-content">
-        <img src={sateLogo} alt='sate logo' className='sate-logo' />
+        <img src={sateLogo} alt='sate logo' className='sate-logo' onClick={this.props.logoAnimation}/>
         <div className="written-content-container">
           <div className="body-text" style={this.state.bodyTextStyle} onMouseEnter={this.sheenAnimation}>
             SATE IS A PREMIUM MEAL PLANNING AND DELIVERY SERVICE FOR THOSE WHO TAKE THEIR FITNESS AND NUTRITION SERIOUSLY.

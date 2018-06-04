@@ -1,4 +1,10 @@
 
+@keyframes from-center {
+  50% {left: 100%}
+  51% {left: -10%}
+
+}
+
 .food-image {
   height: auto;
   position: absolute;
@@ -23,6 +29,8 @@
   right: 13%;
   top: 300px;
 }
+
+
 .seeds {
   position: absolute;
   margin-left: auto;
@@ -63,5 +71,4 @@
   left: 300px;
   bottom: -80px;
 }
-
 
