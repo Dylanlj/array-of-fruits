@@ -6,16 +6,10 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  overflow: hidden; }
-
-.sate-background {
-  object-fit: cover;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1; }
+  overflow: hidden;
+  background-image: url(./assets/images/sate_background.jpg);
+  background-size: cover;
+  background-position: center; }
 
 @keyframes content-fade-in {
   0% {
@@ -63,7 +57,7 @@
 
 @keyframes sheen {
   0% {
-    background-position: 200% 0%; } }
+    background-position: 100% 0%; } }
 
 .body-text {
   font-size: 18px;
@@ -71,7 +65,7 @@
   line-height: 1.5;
   letter-spacing: 5px;
   color: #cecece;
-  background: url("./assets/images/sheen.png");
+  background: url("./assets/images/shadow.png");
   background-position: 0% 0%;
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
@@ -165,6 +159,80 @@
   left: 300px;
   bottom: -80px; }
 
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .body-text {
+    font-size: 32px; }
+  .leave-email {
+    font-size: 24px; }
+  .your-email input {
+    font-size: 24px;
+    width: 264px;
+    height: 44px; }
+  .media-icons img {
+    width: 30px; }
+  .sate-logo {
+    width: 46px; }
+  .mint2 {
+    width: 190px; }
+  .fig {
+    width: 270px; }
+  .mushroom {
+    width: 270px; }
+  .kiwi {
+    width: 245px; }
+  .mint1 {
+    width: 200px; }
+  .body-text {
+    background-position: -60% 0%; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (min-device-width: 900px) {
+  .body-text {
+    font-size: 28px; }
+  .leave-email {
+    font-size: 20px; }
+  .your-email input {
+    font-size: 20px;
+    width: 260px;
+    height: 40px; }
+  .media-icons img {
+    width: 20px; }
+  .sate-logo {
+    width: 36px; }
+  .mint2 {
+    width: 140px; }
+  .fig {
+    width: 220px; }
+  .mushroom {
+    width: 220px; }
+  .kiwi {
+    width: 220px; }
+  .mint1 {
+    width: 150px; } }
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .body-text {
+    font-size: 32px; }
+  .leave-email {
+    font-size: 24px; }
+  .your-email input {
+    font-size: 24px;
+    width: 264px;
+    height: 44px; }
+  .media-icons img {
+    width: 30px; }
+  .sate-logo {
+    width: 46px; }
+  .mint2 {
+    width: 190px; }
+  .fig {
+    width: 270px; }
+  .mushroom {
+    width: 270px; }
+  .kiwi {
+    width: 245px; }
+  .mint1 {
+    width: 200px; } }
+
 @media screen and (max-width: 768px) {
   .mushroom {
     left: 84%; }
@@ -219,75 +287,3 @@
   .mint2 {
     top: -80px;
     transform: rotate(-30deg); } }
-
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-  .body-text {
-    font-size: 32px; }
-  .leave-email {
-    font-size: 24px; }
-  .your-email input {
-    font-size: 24px;
-    width: 264px;
-    height: 44px; }
-  .media-icons img {
-    width: 30px; }
-  .sate-logo {
-    width: 46px; }
-  .mint2 {
-    width: 190px; }
-  .fig {
-    width: 270px; }
-  .mushroom {
-    width: 270px; }
-  .kiwi {
-    width: 245px; }
-  .mint1 {
-    width: 200px; } }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .body-text {
-    font-size: 28px; }
-  .leave-email {
-    font-size: 20px; }
-  .your-email input {
-    font-size: 20px;
-    width: 260px;
-    height: 40px; }
-  .media-icons img {
-    width: 20px; }
-  .sate-logo {
-    width: 36px; }
-  .mint2 {
-    width: 140px; }
-  .fig {
-    width: 220px; }
-  .mushroom {
-    width: 220px; }
-  .kiwi {
-    width: 220px; }
-  .mint1 {
-    width: 150px; } }
-
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
-  .body-text {
-    font-size: 32px; }
-  .leave-email {
-    font-size: 24px; }
-  .your-email input {
-    font-size: 24px;
-    width: 264px;
-    height: 44px; }
-  .media-icons img {
-    width: 30px; }
-  .sate-logo {
-    width: 46px; }
-  .mint2 {
-    width: 190px; }
-  .fig {
-    width: 270px; }
-  .mushroom {
-    width: 270px; }
-  .kiwi {
-    width: 245px; }
-  .mint1 {
-    width: 200px; } }

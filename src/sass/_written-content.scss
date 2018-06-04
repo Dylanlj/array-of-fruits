@@ -57,7 +57,7 @@
 
 @keyframes sheen {
   0% {
-    background-position: 200% 0%;
+    background-position: 100% 0%;
 
   }
 }
@@ -68,9 +68,8 @@
   line-height: 1.5;
   letter-spacing: 5px;
   color: $off-white;
-  background: url("./assets/images/sheen.png");
+  background: url("./assets/images/shadow.png");
   background-position: 0% 0%;
-
    background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

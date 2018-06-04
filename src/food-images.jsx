@@ -117,7 +117,7 @@ class FoodImages extends Component {
           yDif = mousePosition.y - center.y
           top = element.y + yDif * -0.01
           left = element.x + xDif * -0.01
-          blur = 1.5
+          blur = 0.5
         }
 
         foodPosition[foodName] = {
