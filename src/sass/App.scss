@@ -32,11 +32,15 @@ $off-white: #cecece;
   position: absolute;
   height: 6px; width: 6px;
   border-radius: 3px;
-  background: teal;
+  background: $off-white;
+  opacity: 0.9;
   z-index: 50;
+
 }
 
-
+  selector {
+    cursor: none;
+  }
 @import '_written-content.scss';
 @import '_food-images.scss';
 @import '_responsive.scss';

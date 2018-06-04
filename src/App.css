@@ -16,8 +16,12 @@
   height: 6px;
   width: 6px;
   border-radius: 3px;
-  background: teal;
+  background: #cecece;
+  opacity: 0.9;
   z-index: 50; }
+
+selector {
+  cursor: none; }
 
 @keyframes content-fade-in {
   0% {

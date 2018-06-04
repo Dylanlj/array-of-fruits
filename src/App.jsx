@@ -10,25 +10,24 @@ class App extends Component {
     super(props)
     this.state = {
       mousePosition: {x: 0, y: 0},
-      adjustedMouse: {x: 0, y: 0},
       trailPosition: [],
-      dots: [],
+      // dots: [],
       dotClass: 'inactive'
     }
   }
 
   componentWillMount () {
     let startingPosition = []
-      for(let i = 0; i < 12; i++) {
-        startingPosition.push({x: 0, y: 0})
+      for(let i = 0; i < 6; i++) {
+        startingPosition.push(this.state.mousePosition)
       }
     this.setState({trailPosition: startingPosition})
   }
 
   handleMouseEvent = (event) => {
     this.setState({
-      mousePosition: {x: event.screenX - 20, y: event.screenY - 120}
-    }, this.draw)
+      mousePosition: {x: event.pageX , y: event.pageY }
+    })
   }
 
   logoAnimation = () => {
@@ -36,21 +35,27 @@ class App extends Component {
     if(this.state.dotClass === 'inactive') {
       let dots = []
       // for(let i = 0; i < 6; i++) {
-      //   let d = this.createDot()
+      //   let d = (<div className={this.state.dotClass} style={{
+      //     left: this.state.trailPosition[i].x + 'px',
+      //     top: this.state.trailPosition[i].y + 'px'
+      //     }}
+      //   />)
       //   dots.push(d)
       // }
-      this.setState({dotClass: 'trail', dots: dots}, this.draw )
+      document.body.style.cursor = 'none';
+      this.setState({dotClass: 'trail', dots: dots}, this.callDraw )
     } else {
+      document.body.style.cursor = 'auto';
       this.setState({
         dotClass: 'inactive'
       })
     }
   }
 
-  // callDraw = () => {
-  //   this.draw()
-  //   setTimeout(this.callDraw, 100)
-  // }
+  callDraw = () => {
+    this.draw()
+    requestAnimationFrame(this.callDraw)
+  }
 
   draw = () => {
     let dotPositions = this.state.trailPosition
@@ -59,45 +64,18 @@ class App extends Component {
     for (let i = 0; i < dotPositions.length; i++){
       let nextDot = dotPositions[i + 1] || dotPositions[0]
       dotPositions[i] = {x: mouse.x, y: mouse.y}
+      console.log(dotPositions)
+      // debugger
 
-      // this.setState({trailPosition: dotPositions})
-      // if( (dotPositions[i].x - this.state.mousePosition.x) > 0.4) {
-        this.setState({trailPosition: dotPositions})
-      // }
+      this.setState({trailPosition: dotPositions})
+      mouse.x += (nextDot.x - dotPositions[i].x) * 0.6
+      mouse.y += (nextDot.y - dotPositions[i].y) * 0.6
 
-      mouse.x += (nextDot.x - mouse.x) * 0.6
-      mouse.y += (nextDot.y - mouse.y) * 0.6
     }
   }
 
-  // createDot = () => {
-
-  //   let n = (
-  //     <div className='trail' style={{
-  //       left: this.state.mousePosition.x + 'px',
-  //       top: this.state.mousePosition.y + 'px'
-  //       }}
-  //     />)
-  //   return n;
-
-  // };
-
-//   var Dot = function() {
-//   this.x = 0;
-//   this.y = 0;
-//   this.node = (function(){
-//     var n = document.createElement("div");
-//     n.className = "trail";
-//     document.body.appendChild(n);
-//     return n;
-//   }());
-// };
 
   render() {
-
-    // while( this.state.dotClass === 'trail') {
-    //   setTimeout(this.draw, 500)
-    // }
 
     return (
       <div className="App" onMouseMove={this.handleMouseEvent.bind(this)}>
@@ -138,6 +116,7 @@ class App extends Component {
           top: this.state.trailPosition[5].y + 'px'
           }}
         />
+
 
       </div>
     );
