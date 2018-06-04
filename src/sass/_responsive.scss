@@ -79,3 +79,56 @@
     @include mint-away-from-text()
   }
 }
+
+
+//ipads
+
+
+@mixin for-tablets($text, $images) {
+  .body-text {font-size: 28px + $text}
+  .leave-email {font-size: 20px + $text}
+  .your-email {
+    input {
+      font-size: 20px + $text;
+      width: 260px + $text;
+      height: 40px + $text;
+    }
+  }
+  .media-icons {
+    img {width: 20px + $images / 5}
+  }
+  .sate-logo {width: 36px + $images / 5}
+  .mint2 {width: 140px + $images}
+  .fig {width: 220px + $images}
+  .mushroom {width: 220px + $images}
+  .kiwi {width: 220px + $images / 2}
+  .mint1 {width: 150px + $images}
+}
+
+
+//ipad pro
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  @include for-tablets(4, 50)
+}
+
+
+
+//ipad
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+  @include for-tablets(0, 0);
+
+}
+
+//ipad pro portrait
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+  @include for-tablets(4, 50)
+}

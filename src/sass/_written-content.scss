@@ -34,7 +34,7 @@
 .media-icons {
 
   img {
-    height: 16px;
+    height: auto;
     width: 16px;
     margin-right: 10px;
     // fill:red;
@@ -50,7 +50,7 @@
 .sate-logo {
   position: absolute;
   top: 8%;
-  height: 28px;
+  height: auto;
   width: 28px;
 }
 
@@ -60,9 +60,6 @@
     background-position: 200% 0%;
 
   }
-  // 100% {
-  //       background-image: -webkit-gradient( linear, left top, right bottom, color-stop(0.3, $off-white), color-stop(0.5, green), color-stop(1, $off-white) );
-  // }
 }
 
 .body-text {
